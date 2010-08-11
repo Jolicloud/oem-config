@@ -200,6 +200,8 @@ class Frontend(BaseFrontend):
         self.username_changed_id = self.username.connect(
             'changed', self.on_username_changed)
 
+        self.auto_login.hide()
+
         self.steps.set_current_page(self.steps.page_num(self.step_language))
         # TODO cjwatson 2006-07-07: why isn't on_steps_switch_page getting
         # invoked?
