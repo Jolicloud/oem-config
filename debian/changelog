@@ -1,3 +1,12 @@
+oem-config (1.54.13jolicloud1) robby; urgency=low
+
+  * An ultra-hack of a fix putting the mnemonics back onto the buttons
+  * Do not display autologin option
+  * Show bigger map when screen is not large enough
+  * Updated the list of timezones from tzsetup
+
+ -- Adam McDaniel <adam@jolicloud.org>  Tue, 10 Aug 2010 23:32:16 -0600
+
 oem-config (1.54.13) jaunty; urgency=low
 
   [ Roman Shtylman ]
