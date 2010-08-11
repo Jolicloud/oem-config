@@ -6,5 +6,5 @@ _Name=Prepare for shipping to end user
 Exec=oem-config-prepare
 Terminal=false
 Categories=GTK;System;Settings;
-OnlyShowIn=GNOME;XFCE;
+OnlyShowIn=
 X-Ubuntu-Gettext-Domain=oem-config
