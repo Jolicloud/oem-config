@@ -1,7 +1,7 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!DOCTYPE glade-interface SYSTEM "glade-2.0.dtd">
-<!--Generated with glade3 3.4.5 on Fri Jul 25 09:40:30 2008 -->
+<?xml version="1.0"?>
 <glade-interface>
+  <!-- interface-requires gtk+ 2.16 -->
+  <!-- interface-naming-policy toplevel-contextual -->
   <widget class="GtkWindow" id="dummy_window">
     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
     <child>
@@ -12,7 +12,7 @@
           <widget class="GtkLabel" id="user_heading_label">
             <property name="visible">True</property>
             <property name="xalign">0</property>
-            <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Who are you?&lt;/b&gt;&lt;/big&gt;</property>
+            <property name="label" translatable="yes">&lt;big&gt;&lt;b&gt;Choose a login and password for this computer.&lt;/b&gt;&lt;/big&gt;</property>
             <property name="use_markup">True</property>
             <property name="selectable">True</property>
             <property name="single_line_mode">True</property>
@@ -20,6 +20,7 @@
           <packing>
             <property name="expand">False</property>
             <property name="fill">False</property>
+            <property name="position">0</property>
           </packing>
         </child>
         <child>
@@ -48,12 +49,13 @@
                     <property name="visible">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">What is your name?</property>
+                    <property name="label" translatable="yes">Your name:</property>
                     <property name="selectable">True</property>
                   </widget>
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
+                    <property name="position">0</property>
                   </packing>
                 </child>
                 <child>
@@ -77,6 +79,7 @@
                           </widget>
                           <packing>
                             <property name="expand">False</property>
+                            <property name="position">0</property>
                           </packing>
                         </child>
                         <child>
@@ -91,6 +94,7 @@
                               </widget>
                               <packing>
                                 <property name="expand">False</property>
+                                <property name="position">0</property>
                               </packing>
                             </child>
                             <child>
@@ -121,6 +125,7 @@
               </widget>
               <packing>
                 <property name="expand">False</property>
+                <property name="position">0</property>
               </packing>
             </child>
             <child>
@@ -133,9 +138,12 @@
                     <property name="visible">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">What name do you want to use to log in?</property>
+                    <property name="label" translatable="yes">Computer login:</property>
                     <property name="selectable">True</property>
                   </widget>
+                  <packing>
+                    <property name="position">0</property>
+                  </packing>
                 </child>
                 <child>
                   <widget class="GtkAlignment" id="alignment2">
@@ -164,6 +172,7 @@
                               </widget>
                               <packing>
                                 <property name="expand">False</property>
+                                <property name="position">0</property>
                               </packing>
                             </child>
                             <child>
@@ -178,6 +187,7 @@
                                   </widget>
                                   <packing>
                                     <property name="expand">False</property>
+                                    <property name="position">0</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -200,13 +210,16 @@
                               </packing>
                             </child>
                           </widget>
+                          <packing>
+                            <property name="position">0</property>
+                          </packing>
                         </child>
                         <child>
                           <widget class="GtkLabel" id="username_extra_label">
                             <property name="visible">True</property>
                             <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                             <property name="xalign">0</property>
-                            <property name="label" translatable="yes">&lt;i&gt;If more than one person will use this computer, you can set up multiple accounts after installation.&lt;/i&gt;</property>
+                            <property name="label" translatable="yes">&lt;i&gt;You will use your login and password every time you log on to this computer.&lt;/i&gt;</property>
                             <property name="use_markup">True</property>
                             <property name="wrap">True</property>
                             <property name="selectable">True</property>
@@ -241,12 +254,13 @@
                     <property name="visible">True</property>
                     <property name="events">GDK_POINTER_MOTION_MASK | GDK_POINTER_MOTION_HINT_MASK | GDK_BUTTON_PRESS_MASK | GDK_BUTTON_RELEASE_MASK</property>
                     <property name="xalign">0</property>
-                    <property name="label" translatable="yes">Choose a password to keep your account safe.</property>
+                    <property name="label" translatable="yes">Computer password:</property>
                     <property name="selectable">True</property>
                   </widget>
                   <packing>
                     <property name="expand">False</property>
                     <property name="fill">False</property>
+                    <property name="position">0</property>
                   </packing>
                 </child>
                 <child>
@@ -292,6 +306,9 @@
                                     <property name="width_chars">12</property>
                                     <signal name="changed" handler="info_loop"/>
                                   </widget>
+                                  <packing>
+                                    <property name="position">0</property>
+                                  </packing>
                                 </child>
                                 <child>
                                   <widget class="GtkEntry" id="verified_password">
@@ -311,6 +328,7 @@
                               <packing>
                                 <property name="expand">False</property>
                                 <property name="fill">False</property>
+                                <property name="position">0</property>
                               </packing>
                             </child>
                             <child>
@@ -325,6 +343,7 @@
                                   </widget>
                                   <packing>
                                     <property name="expand">False</property>
+                                    <property name="position">0</property>
                                   </packing>
                                 </child>
                                 <child>
@@ -350,6 +369,7 @@
                           </widget>
                           <packing>
                             <property name="expand">False</property>
+                            <property name="position">0</property>
                           </packing>
                         </child>
                         <child>
@@ -388,12 +408,15 @@
                 <property name="spacing">6</property>
                 <child>
                   <widget class="GtkCheckButton" id="auto_login">
+                    <property name="label" translatable="yes">Log in automatically</property>
                     <property name="visible">True</property>
                     <property name="can_focus">True</property>
-                    <property name="label" translatable="yes">Log in automatically</property>
-                    <property name="response_id">0</property>
+                    <property name="receives_default">False</property>
                     <property name="draw_indicator">True</property>
                   </widget>
+                  <packing>
+                    <property name="position">0</property>
+                  </packing>
                 </child>
               </widget>
               <packing>
