@@ -1,0 +1,50 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          oem-config
+# Required-Start:    $remote_fs $syslog $time hal
+# Required-Stop:     $remote_fs $syslog $time hal
+# X-Start-Before:    gdm kdm xdm
+# X-Stop-After:      gdm kdm xdm
+# Default-Start:
+# Default-Stop:
+# Short-Description: End-user configuration after initial OEM installation
+# Description:       Run on the first boot after shipping to the end user to
+#                    reconfigure the system for them; removes itself
+#                    thereafter.
+### END INIT INFO
+
+set -e
+
+PATH="/usr/local/sbin:/usr/sbin:/sbin${PATH:+:$PATH}"
+
+# Exit if the package is not installed
+if ! type oem-config-firstboot >/dev/null 2>&1; then
+	exit 0
+fi
+
+debug=
+for x in $(cat /proc/cmdline); do
+	case $x in
+		debug-oem-config)
+			debug=--debug
+			;;
+	esac
+done
+
+case $1 in
+	start)
+		# Make the splash screen go away if necessary.
+		if type usplash_write >/dev/null 2>&1 && \
+		   [ "$TERM" = linux ]; then
+			clear >/dev/tty1
+			chvt 1
+			usplash_write QUIT || true
+		fi
+
+		# Reconfigure the system (starts a temporary display
+		# manager).
+		oem-config-firstboot $debug </dev/console >/dev/console 2>&1
+		;;
+esac
+
+exit 0

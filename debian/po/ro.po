@@ -1,0 +1,244 @@
+# Romanian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: oem-config@packages.debian.org\n"
+"POT-Creation-Date: 2009-02-18 23:09+0000\n"
+"PO-Revision-Date: 2009-04-06 19:42+0000\n"
+"Last-Translator: Eddy Petrisor <eddy.petrisor@gmail.com>\n"
+"Language-Team: Romanian <debian-l10n-romanian@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-08 23:29+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:2001
+msgid "System Configuration"
+msgstr "Configurare Sistem"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:3001
+msgid "Step ${INDEX} of ${TOTAL}"
+msgstr "Pasul ${INDEX} din ${TOTAL}"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:4001
+msgid "Choose language"
+msgstr "Alegeți limba / Choose language"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:5001
+msgid ""
+"Once you answer a few questions, the system will be ready for you to use."
+msgstr ""
+"După ce vei răspunde câtorva întrebări, sistemul va fi gata pentru folosire."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:6001
+msgid "Choose time zone"
+msgstr "Alege fusul orar"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:7001
+msgid "Select a city in your country and time zone."
+msgstr "Alege un oraş din ţara sau fusul tău orar:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:8001
+msgid "Selected city:"
+msgstr "Orașul selectat:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:9001
+msgid "Selected region:"
+msgstr "Regiunea aleasă:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:10001
+msgid "Time zone:"
+msgstr "Fus orar:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:11001
+msgid "Current time:"
+msgstr "Timpul curent:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:12001
+msgid "Keyboard layout"
+msgstr "Aranjament tastatură"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:13001
+msgid "Which layout is most similar to your keyboard?"
+msgstr ""
+"Ce aranjament este cel mai apropiat de cel al tastaturii dumneavoastră?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:14001
+msgid "You can type into this box to test your new keyboard layout."
+msgstr ""
+"Puteți tasta în această căsuță pentru a testa noul aranjament al tastaturii."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:15001
+msgid "Who are you?"
+msgstr "Cine sunteți?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:16001
+msgid "What is your name?"
+msgstr "Care este numele dumneavoastră?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:17001
+msgid "What name do you want to use to log in?"
+msgstr "Ce nume doriți să folosiți pentru autentificare?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:18001
+msgid ""
+"If more than one person will use this computer, you can set up multiple "
+"accounts after installation."
+msgstr ""
+"În cazul în care acest calculator va fi utilizat de mai multe persoane, după "
+"instalare, veți putea definii mai multe conturi."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:19001
+msgid "Choose a password to keep your account safe."
+msgstr "Alegeți o parolă pentru a menține acest cont în siguranță."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:20001
+msgid "You are running in debugging mode. Do not use a valuable password!"
+msgstr "Rulați în modul de depanare. Nu folosiți o parolă importantă."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:21001
+msgid ""
+"Enter the same password twice, so that it can be checked for typing errors."
+msgstr ""
+"Introduceți aceași parolă de două ori pentru a fi verificată împotriva "
+"erorilor de tastare."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:22001
+msgid "Network configuration"
+msgstr "Configurare rețea"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:23001
+msgid "Software selection"
+msgstr "Selecție aplicații"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:24001
+msgid "Log in automatically"
+msgstr "Autentificare automată"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:25001
+msgid "Applying configuration"
+msgstr "Se aplică configurările"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:26001
+msgid "Go Back"
+msgstr "Înapoi"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:27001
+msgid "Continue"
+msgstr "Continuă"
+
+#. Type: title
+#. Description
+#. Info message displayed when running in OEM mode
+#: ../oem-config-check.templates:2001
+msgid "OEM mode (for manufacturers only)"
+msgstr "Mod OEM (doar pentru producători)"
+
+#. Type: text
+#. Description
+#. Translators: OEM stands for "Original Equipment Manufacturer", used in
+#. this case to describe an organisation that pre-installs the operating
+#. system on hardware and then sells the result to end users. These strings
+#. will typically only be displayed to OEMs themselves, so you don't have to
+#. worry too much about clarity.
+#: ../oem-config-udeb.templates:1001
+msgid "Prepare for OEM configuration"
+msgstr "Se pregătește configurarea OEM"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#: ../oem-config-udeb.templates:2001
+msgid "Preparing for OEM configuration..."
+msgstr "Se pregătește configurarea OEM..."
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid "Ready for OEM configuration"
+msgstr "Pregătit pentru configurarea OEM"
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"When you boot into the new system, you will be able to log in as the 'oem' "
+"user with the password you selected earlier; this user also has "
+"administrative privileges using 'sudo'. You will then be able to make any "
+"additional modifications you require to the system."
+msgstr ""
+"Când vei boota pe noul sistem, vei putea să te autentifici ca utilizatorul "
+"'oem' cu parola selectată mai devreme; acest ultilizator are de asemenea "
+"privilegii de administrare folosind 'sudo'. Vei putea să faci modificări "
+"adiţionale la sistemul tău"
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"Once the system is configured to your satisfaction, run 'oem-config-"
+"prepare'. This will cause the system to delete the temporary 'oem' user and "
+"ask the end user various configuration questions the next time it boots."
+msgstr ""
+"O dată ce sistemul este configurat pentru necesităţi tale, rulează 'oem-"
+"config-prepare'. Aceasta va face ca sistemul să şteargă utilizatorul "
+"temporar 'oem' iar la următoarea pornire a calculatorului să întrebe "
+"utilizatorul despre configurarea finală."

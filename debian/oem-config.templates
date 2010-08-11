@@ -1,0 +1,121 @@
+Template: debian-installer/dummy
+Type: string
+Description: dummy template for preseeding unavailable questions
+ The answer to this question has been preseeded (${ID}).
+ If you see this template, you've found a bug in the installer;
+ please file a report.
+
+Template: oem-config/text/oem_config
+Type: text
+_Description: System Configuration
+
+Template: oem-config/text/step_label
+Type: text
+_Description: Step ${INDEX} of ${TOTAL}
+
+Template: oem-config/text/language_heading_label
+Type: text
+_Description: Choose language
+
+Template: oem-config/text/language_text_label
+Type: text
+_Description: Once you answer a few questions, the system will be ready for you to use.
+
+Template: oem-config/text/timezone_heading_label
+Type: text
+_Description: Choose time zone
+
+Template: oem-config/text/timezone_comment_label
+Type: text
+_Description: Select a city in your country and time zone.
+
+Template: oem-config/text/timezone_city_label
+Type: text
+_Description: Selected city:
+
+Template: oem-config/text/timezone_country_label
+Type: text
+_Description: Selected region:
+
+Template: oem-config/text/timezone_zone_label
+Type: text
+_Description: Time zone:
+
+Template: oem-config/text/timezone_time_label
+Type: text
+_Description: Current time:
+
+Template: oem-config/text/keyboard_heading_label
+Type: text
+_Description: Keyboard layout
+
+Template: oem-config/text/keyboard_comment_label
+Type: text
+_Description: Which layout is most similar to your keyboard?
+
+Template: oem-config/text/keyboard_test_label
+Type: text
+_Description: You can type into this box to test your new keyboard layout.
+
+Template: oem-config/text/user_heading_label
+Type: text
+_Description: Who are you?
+
+Template: oem-config/text/fullname_label
+Type: text
+_Description: What is your name?
+
+Template: oem-config/text/username_label
+Type: text
+_Description: What name do you want to use to log in?
+
+Template: oem-config/text/username_extra_label
+Type: text
+_Description: If more than one person will use this computer, you can set up multiple accounts after installation.
+
+Template: oem-config/text/password_label
+Type: text
+_Description: Choose a password to keep your account safe.
+
+Template: oem-config/text/password_debug_warning_label
+Type: text
+_Description: You are running in debugging mode. Do not use a valuable password!
+
+Template: oem-config/text/password_extra_label
+Type: text
+_Description: Enter the same password twice, so that it can be checked for typing errors.
+
+Template: oem-config/text/network_heading_label
+Type: text
+_Description: Network configuration
+
+Template: oem-config/text/tasks_heading_label
+Type: text
+_Description: Software selection
+
+Template: oem-config/text/auto_login
+Type: text
+_Description: Log in automatically
+
+Template: oem-config/text/applying
+Type: text
+_Description: Applying configuration
+
+Template: oem-config/text/go_back
+Type: text
+# Translators, this text will appear on a button, so KEEP IT SHORT
+_Description: Go Back
+
+Template: oem-config/text/continue
+Type: text
+# Translators, this text will appear on a button, so KEEP IT SHORT
+_Description: Continue
+
+Template: oem-config/steps
+Type: multiselect
+Choices: language, timezone, keyboard, user, network, tasks
+Default: language, timezone, keyboard, user
+Description: for internal use; can be preseeded
+ List of steps to display. Steps are always displayed in the order given by
+ this list of choices, regardless of the order given in the answer to this
+ question.

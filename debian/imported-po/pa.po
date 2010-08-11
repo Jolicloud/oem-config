@@ -1,0 +1,40 @@
+# translation of gtk+.HEAD.po to Punjabi
+# Copyright (C) 2004 THE gtk+.HEAD'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the gtk+.HEAD package.
+#
+# Amanpreet Singh Alam <amanlinux@netscape.net>, 2004.
+# Amanpreet Singh Alam <aalam@redhat.com>, 2004.
+# Amanpreet Singh Brar <amanpreetalam@yahoo.com>, 2005.
+# Amanpreet Singh Alam <apbrar@gmail.com>, 2006.
+# A S Alam <apbrar@gmail.com>, 2006.
+# A S Alam <aalam@users.sf.net>, 2007.
+# ASB <aalam@users.sf.net>, 2007.
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+.HEAD\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2007-09-05 19:27+0530\n"
+"Last-Translator: ASB <aalam@users.sf.net>\n"
+"Language-Team: Punjabi <punjabi-l10n@lists.sf.net>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.4\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "ਪਿੱਛੇ(_B)"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "ਅੱਗੇ(_F)"

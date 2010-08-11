@@ -1,0 +1,62 @@
+# Danish translation of GTK+.
+# Copyright (C) 1999-2007 Free Software Foundation, Inc.
+# Birger Langkjer <birger.langkjer@image.dk>, 1999.
+# Kenneth Christiansen, 1999-2000
+# Keld Simonsen <keld@dkuug.dk>, 2000.
+# Ole Laursen <olau@hardworking.dk>, 2001, 02, 03, 04.
+# Martin Willemoes Hansen <mwh@sysrq.dk>, 2005.
+# Marie Lund <marielund@post.cybercity.dk>, 2005.
+# Ask Hjorth Larsen <asklarsen@gmail.com>, 2007.
+#
+# Konventioner:
+#
+#   attribute -> egenskab
+#   colormap -> farvetabel
+#   directory -> mappe 
+#   entry -> indtastningsfelt
+#   frame (i animation) -> billede
+#   (column) header -> (kolonne)overskrift
+#   input -> (til tider) indtastning
+#   label -> etiket (med denne stavning)
+#   pixel -> skærmpunkt, punkt, billedpunkt
+#   scroll bar -> rulleskakt
+#   spin button -> talkontrol
+#   toggle button -> afkrydsningsknap
+#   widget -> kontrol
+#
+# Nogle af de mere specielle grafiske udtryk er allerede oversat i
+# Gimp'en.
+#
+# Værktøjstip er konsekvent blevet oversat uden et afsluttende punktum
+# (i modsætning til originalteksterne hvor det skifter lidt).
+#
+# URI og URL bruges en del, hvis der kan være tvivl så oversæt hellere URI -> URI og URL -> URL.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2007-08-24 02:26+0200\n"
+"Last-Translator: Ask Hjorth Larsen <asklarsen@gmail.com>\n"
+"Language-Team: Danish <dansk@dansk-gruppen.dk>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "Til_bage"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "Frem_ad"

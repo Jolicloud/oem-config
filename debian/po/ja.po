@@ -1,0 +1,243 @@
+# Japanese messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: oem-config@packages.debian.org\n"
+"POT-Creation-Date: 2009-02-18 23:09+0000\n"
+"PO-Revision-Date: 2009-04-06 19:39+0000\n"
+"Last-Translator: Kenshi Muto <kmuto@debian.org>\n"
+"Language-Team: Debian L10n Japanese <debian-l10n-japanese@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-08 23:28+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:2001
+msgid "System Configuration"
+msgstr "システム設定"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:3001
+msgid "Step ${INDEX} of ${TOTAL}"
+msgstr "ステップ ${INDEX} / ${TOTAL}"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:4001
+msgid "Choose language"
+msgstr "言語の選択/Choose language"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:5001
+msgid ""
+"Once you answer a few questions, the system will be ready for you to use."
+msgstr "いくつかの質問に答えると、システムを使えるようになります。"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:6001
+msgid "Choose time zone"
+msgstr "時間帯の設定"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:7001
+msgid "Select a city in your country and time zone."
+msgstr "都市とタイムゾーンを選択してください:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:8001
+msgid "Selected city:"
+msgstr "選択された都市:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:9001
+msgid "Selected region:"
+msgstr "選択された地域:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:10001
+msgid "Time zone:"
+msgstr "タイムゾーン:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:11001
+msgid "Current time:"
+msgstr "現在時刻:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:12001
+msgid "Keyboard layout"
+msgstr "キーボードレイアウト"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:13001
+msgid "Which layout is most similar to your keyboard?"
+msgstr "どのレイアウトがお使いのキーボードに最も近いですか？"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:14001
+msgid "You can type into this box to test your new keyboard layout."
+msgstr ""
+"この入力欄を使って、選択したキーボードレイアウトのテストをすることができま"
+"す。"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:15001
+msgid "Who are you?"
+msgstr "あなたは誰ですか？"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:16001
+msgid "What is your name?"
+msgstr "あなたの名前は何ですか？"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:17001
+msgid "What name do you want to use to log in?"
+msgstr "ログインに使いたい名前は何ですか？"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:18001
+msgid ""
+"If more than one person will use this computer, you can set up multiple "
+"accounts after installation."
+msgstr ""
+"このコンピュータを2人以上で使うならば、インストール後に複数のアカウントをセッ"
+"トアップすることができます。"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:19001
+msgid "Choose a password to keep your account safe."
+msgstr "アカウントを安全に保つために、パスワードを入力してください。"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:20001
+msgid "You are running in debugging mode. Do not use a valuable password!"
+msgstr ""
+"デバッグモードで起動しています。普段利用しているパスワードを入力しないでくだ"
+"さい!"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:21001
+msgid ""
+"Enter the same password twice, so that it can be checked for typing errors."
+msgstr "打ち間違っているといけないので、同じパスワードを2回入力してください。"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:22001
+msgid "Network configuration"
+msgstr "ネットワーク設定"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:23001
+msgid "Software selection"
+msgstr "ソフトウェアセレクション"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:24001
+msgid "Log in automatically"
+msgstr "自動的にログインする"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:25001
+msgid "Applying configuration"
+msgstr "設定の適用"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:26001
+msgid "Go Back"
+msgstr "戻る"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:27001
+msgid "Continue"
+msgstr "続ける"
+
+#. Type: title
+#. Description
+#. Info message displayed when running in OEM mode
+#: ../oem-config-check.templates:2001
+msgid "OEM mode (for manufacturers only)"
+msgstr "OEMモード（PC製造者専用）"
+
+#. Type: text
+#. Description
+#. Translators: OEM stands for "Original Equipment Manufacturer", used in
+#. this case to describe an organisation that pre-installs the operating
+#. system on hardware and then sells the result to end users. These strings
+#. will typically only be displayed to OEMs themselves, so you don't have to
+#. worry too much about clarity.
+#: ../oem-config-udeb.templates:1001
+msgid "Prepare for OEM configuration"
+msgstr "Prepare for OEM configuration"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#: ../oem-config-udeb.templates:2001
+msgid "Preparing for OEM configuration..."
+msgstr "Preparing for OEM configuration..."
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid "Ready for OEM configuration"
+msgstr "Ready for OEM configuration"
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"When you boot into the new system, you will be able to log in as the 'oem' "
+"user with the password you selected earlier; this user also has "
+"administrative privileges using 'sudo'. You will then be able to make any "
+"additional modifications you require to the system."
+msgstr ""
+"新しいシステムで起動した時、'oem'ユーザとして最初に選択したパスワードでログイ"
+"ンすることができます。このユーザは'sudo'を使うことで管理に必要な特権を扱うこ"
+"とができます。\r\n"
+"これにより、必要な追加や変更をシステムに加えることができます。"
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"Once the system is configured to your satisfaction, run 'oem-config-"
+"prepare'. This will cause the system to delete the temporary 'oem' user and "
+"ask the end user various configuration questions the next time it boots."
+msgstr ""
+"システムが必要な状態に設定されたら、'oem-config-prepare' を実行してください"
+"\r\n"
+"この操作により一時的に作成した 'oem' ユーザーが削除され、\r\n"
+"次にPCが起動するときにエンドユーザに設定のための質問を行うよう設定します"

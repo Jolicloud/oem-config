@@ -1,0 +1,240 @@
+# Esperanto messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: oem-config@packages.debian.org\n"
+"POT-Creation-Date: 2009-02-18 23:09+0000\n"
+"PO-Revision-Date: 2009-04-06 19:38+0000\n"
+"Last-Translator: Felipe Castro <fefcas@gmail.com>\n"
+"Language-Team: Esperanto <debian-l10n-esperanto@lists.debian.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-08 23:28+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:2001
+msgid "System Configuration"
+msgstr "Sistemkonfigurado"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:3001
+msgid "Step ${INDEX} of ${TOTAL}"
+msgstr "Paŝo ${INDEX} el ${TOTAL}"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:4001
+msgid "Choose language"
+msgstr "Elekti lingvon/Choose language"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:5001
+msgid ""
+"Once you answer a few questions, the system will be ready for you to use."
+msgstr "Post respondo al kelkaj demandoj la sistemo estos preta por uzado."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:6001
+msgid "Choose time zone"
+msgstr "Elektu horozonon"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:7001
+msgid "Select a city in your country and time zone."
+msgstr "Elektu urbon en viaj lando kaj horzono."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:8001
+msgid "Selected city:"
+msgstr "Elektita urbo:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:9001
+msgid "Selected region:"
+msgstr "Elektita regiono:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:10001
+msgid "Time zone:"
+msgstr "Hora zono:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:11001
+msgid "Current time:"
+msgstr "Nuna horo:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:12001
+msgid "Keyboard layout"
+msgstr "Elektu klavaran aranĝon"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:13001
+msgid "Which layout is most similar to your keyboard?"
+msgstr "Kiu aranĝo plej similas al via klavaro?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:14001
+msgid "You can type into this box to test your new keyboard layout."
+msgstr "Vi povas tajpi en ĉi tiun skatolon por testi vian novan klavararanĝon."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:15001
+msgid "Who are you?"
+msgstr "Kiu vi estas?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:16001
+msgid "What is your name?"
+msgstr "Kio estas via nomo?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:17001
+msgid "What name do you want to use to log in?"
+msgstr "Kion uzantnomon vi volas uzi por ensaluti?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:18001
+msgid ""
+"If more than one person will use this computer, you can set up multiple "
+"accounts after installation."
+msgstr ""
+"Se pli ol unu persono uzos ĉi tiun komputilon, vi povas establi plurajn "
+"kontojn post la instalado."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:19001
+msgid "Choose a password to keep your account safe."
+msgstr "Elektu pasvorton por sekurigi vian konton."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:20001
+msgid "You are running in debugging mode. Do not use a valuable password!"
+msgstr "Vi rulas en sencimiga reĝimo. Ne uzu multvaloran pasvorton!"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:21001
+msgid ""
+"Enter the same password twice, so that it can be checked for typing errors."
+msgstr ""
+"Enmetu la saman pasvorton dufojen, por ke ĝi povas esti kontrolita kontraŭ "
+"tajperaroj."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:22001
+msgid "Network configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:23001
+msgid "Software selection"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:24001
+msgid "Log in automatically"
+msgstr "Aũtomate ensalutu"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:25001
+msgid "Applying configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:26001
+msgid "Go Back"
+msgstr "Retroiru"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:27001
+msgid "Continue"
+msgstr "Daŭrigu"
+
+#. Type: title
+#. Description
+#. Info message displayed when running in OEM mode
+#: ../oem-config-check.templates:2001
+msgid "OEM mode (for manufacturers only)"
+msgstr "OEM-modo (nur por fabrikantoj)"
+
+#. Type: text
+#. Description
+#. Translators: OEM stands for "Original Equipment Manufacturer", used in
+#. this case to describe an organisation that pre-installs the operating
+#. system on hardware and then sells the result to end users. These strings
+#. will typically only be displayed to OEMs themselves, so you don't have to
+#. worry too much about clarity.
+#: ../oem-config-udeb.templates:1001
+msgid "Prepare for OEM configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#: ../oem-config-udeb.templates:2001
+msgid "Preparing for OEM configuration..."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid "Ready for OEM configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"When you boot into the new system, you will be able to log in as the 'oem' "
+"user with the password you selected earlier; this user also has "
+"administrative privileges using 'sudo'. You will then be able to make any "
+"additional modifications you require to the system."
+msgstr ""
+"Kiam vi praŝargos en la novan sistemon, vi kapablos saluti kiel la uzanto "
+"'oem' per la pasvorto kiun vi elektis pli frue; ĉi tiu uzanto ankaŭ posedas "
+"administrajn privilegiojn uzante 'sudo'. Vi tiam povos fari iajn aldonajn "
+"modifojn bezonatajn de vi pri la sistemo."
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"Once the system is configured to your satisfaction, run 'oem-config-"
+"prepare'. This will cause the system to delete the temporary 'oem' user and "
+"ask the end user various configuration questions the next time it boots."
+msgstr ""
+"Kiam la sistemo estas kontentige agordita, plenumu 'oem-config-prepare'. Ĉi "
+"tio kaŭzos la sistemon forigi la nuntempan 'oem' uzanton kaj demandi al la "
+"fina uzanto multajn agordajn demandojn je la sekva fojo je kiu ĝi praŝarĝas."

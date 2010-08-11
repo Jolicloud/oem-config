@@ -1,0 +1,3 @@
+#! /bin/sh
+# anna-install isn't useful in oem-config, so stub it out.
+:

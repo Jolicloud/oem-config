@@ -1,0 +1,244 @@
+# Georgian messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: oem-config@packages.debian.org\n"
+"POT-Creation-Date: 2009-02-18 23:09+0000\n"
+"PO-Revision-Date: 2009-03-29 10:27+0000\n"
+"Last-Translator: Vladimer Sichinava <vsichi@gnome.org>\n"
+"Language-Team: Georgian <aietkolkhi@gmail.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-08 23:30+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:2001
+msgid "System Configuration"
+msgstr "სისტემის კონფიგურაცია"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:3001
+msgid "Step ${INDEX} of ${TOTAL}"
+msgstr "ბიჯი ${INDEX} ${TOTAL}-დან"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:4001
+msgid "Choose language"
+msgstr "ენის ამორჩევა / Choose language"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:5001
+msgid ""
+"Once you answer a few questions, the system will be ready for you to use."
+msgstr ""
+"როგორც კი გასცემთ რამოდენიმე შეკითხვაზე პასუხს, სისტემა მზად იქნება "
+"გამოყენებისთვის."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:6001
+msgid "Choose time zone"
+msgstr "დროის სარტყლის მითითება"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:7001
+msgid "Select a city in your country and time zone."
+msgstr "ამოირჩიეთ თქვენს დროის სარტყელში მყოფი ქალაქი:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:8001
+msgid "Selected city:"
+msgstr "არჩეული ქალაქი:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:9001
+msgid "Selected region:"
+msgstr "არჩეული რეგიონი:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:10001
+msgid "Time zone:"
+msgstr "დროის სარტყელი:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:11001
+msgid "Current time:"
+msgstr "მიმდინარე დრო:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:12001
+msgid "Keyboard layout"
+msgstr "კლავიატურის განლაგება"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:13001
+msgid "Which layout is most similar to your keyboard?"
+msgstr ""
+"რომელი კლავიატურის განლაგება არის ყველაზე მსგავსი თქვენს კლავიატურასთან?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:14001
+msgid "You can type into this box to test your new keyboard layout."
+msgstr ""
+"თქვენი კლავიატურის განლაგების შესამოწმებლად, აკრიფეთ რაიმე ტექსტი მოცემულ "
+"ფანჯარაში."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:15001
+msgid "Who are you?"
+msgstr "ვინ ბრძანდებით?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:16001
+msgid "What is your name?"
+msgstr "თქვენი სახელი?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:17001
+msgid "What name do you want to use to log in?"
+msgstr "სისტემაში შესვლისას რომელი სახელი გამოვიყენოთ?"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:18001
+msgid ""
+"If more than one person will use this computer, you can set up multiple "
+"accounts after installation."
+msgstr ""
+"თუ მოცემულ კომპიუტერს ერთზე მეტი ადამიანი გამოიყენებს, სისტემის დაყენების "
+"პროცესის დასრულების შემდეგ თქვენ შეგეძლებათ ახალი ანგარიშების დამატება."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:19001
+msgid "Choose a password to keep your account safe."
+msgstr "პაროლის ამორჩევა ანგარიშის დასაცავად."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:20001
+msgid "You are running in debugging mode. Do not use a valuable password!"
+msgstr "ნუ გამოიყენებთ მუდმივ პაროლს, სანამ დახვეწის რეჟიმში იმყოფებით."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:21001
+msgid ""
+"Enter the same password twice, so that it can be checked for typing errors."
+msgstr "შეცდომებისაგან დასაზღვევად ორჯერ გაიმეორეთ პაროლი."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:22001
+msgid "Network configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:23001
+msgid "Software selection"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:24001
+msgid "Log in automatically"
+msgstr "სისტემაში ავტომატური დარეგისტრირება"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:25001
+msgid "Applying configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:26001
+msgid "Go Back"
+msgstr "დაბრუნება"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:27001
+msgid "Continue"
+msgstr "გაგრძელება"
+
+#. Type: title
+#. Description
+#. Info message displayed when running in OEM mode
+#: ../oem-config-check.templates:2001
+msgid "OEM mode (for manufacturers only)"
+msgstr "OEM რეჟიმი (მხოლ. მწარმოებლისთვი)"
+
+#. Type: text
+#. Description
+#. Translators: OEM stands for "Original Equipment Manufacturer", used in
+#. this case to describe an organisation that pre-installs the operating
+#. system on hardware and then sells the result to end users. These strings
+#. will typically only be displayed to OEMs themselves, so you don't have to
+#. worry too much about clarity.
+#: ../oem-config-udeb.templates:1001
+msgid "Prepare for OEM configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#: ../oem-config-udeb.templates:2001
+msgid "Preparing for OEM configuration..."
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid "Ready for OEM configuration"
+msgstr ""
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"When you boot into the new system, you will be able to log in as the 'oem' "
+"user with the password you selected earlier; this user also has "
+"administrative privileges using 'sudo'. You will then be able to make any "
+"additional modifications you require to the system."
+msgstr ""
+"ახალი სისტემის ჩატვირთვისას თქვენ შეგიძლიათ დარეგისტრირდეთ, როგორც 'oem' "
+"მომხმარებელი თქვენს მიერ წინასწარ არჩეული პაროლით; გექნებათ ადმინისტრატორის "
+"პრივილეგიები 'sudo'-ს გამოყენებისას, და სისტემაში სასურველი ცვლილებების "
+"შეტანის შესაძლებლობა/უფლება."
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"Once the system is configured to your satisfaction, run 'oem-config-"
+"prepare'. This will cause the system to delete the temporary 'oem' user and "
+"ask the end user various configuration questions the next time it boots."
+msgstr ""
+"მას შემდეგ რაც სისტემა იქნება თქვენი მოთხოვნების შესაბამისად "
+"კონფიგურირებული, გაუშვით ბრძანება 'oem-config-prepare'. რის შედეგადაც "
+"წაიშლება დროებითი 'oem' მომხმარებელი და შემდეგ ჩატვირთვაზე მომხმარებელი "
+"მიიღებს კონფიგურაციისათვის საჭირო შეკითხვებს."

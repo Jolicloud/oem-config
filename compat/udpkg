@@ -1,0 +1,4 @@
+#! /bin/sh
+# localechooser uses this to figure out the architecture. In oem-config,
+# just call dpkg instead.
+exec dpkg "$@"

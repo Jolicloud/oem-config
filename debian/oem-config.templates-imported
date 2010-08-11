@@ -1,0 +1,11 @@
+Template: oem-config/imported/go-back
+Type: text
+# Translations for this template are imported from GTK. Please keep them in
+# sync.
+_Description: Navigation|_Back
+
+Template: oem-config/imported/go-forward
+Type: text
+# Translations for this template are imported from GTK. Please keep them in
+# sync.
+_Description: Navigation|_Forward

@@ -1,0 +1,249 @@
+# Greek messages for debian-installer.
+# Copyright (C) 2003 Software in the Public Interest, Inc.
+# This file is distributed under the same license as debian-installer.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: debian-installer\n"
+"Report-Msgid-Bugs-To: oem-config@packages.debian.org\n"
+"POT-Creation-Date: 2009-02-18 23:09+0000\n"
+"PO-Revision-Date: 2009-04-07 18:08+0000\n"
+"Last-Translator: Thanos Lefteris <alefteris@gmail.com>\n"
+"Language-Team: <en@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Launchpad-Export-Date: 2009-04-08 23:30+0000\n"
+"X-Generator: Launchpad (build Unknown)\n"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:2001
+msgid "System Configuration"
+msgstr "Ρυθμίσεις συστήματος"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:3001
+msgid "Step ${INDEX} of ${TOTAL}"
+msgstr "Βήμα ${INDEX} από ${TOTAL}"
+
+#
+# File: ../localechooser.templates-in, line: 1001
+#. Type: text
+#. Description
+#: ../oem-config.templates:4001
+msgid "Choose language"
+msgstr "Επιλογή Γλώσσας / Choose language"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:5001
+msgid ""
+"Once you answer a few questions, the system will be ready for you to use."
+msgstr ""
+"Εφόσον απαντήσετε σε μερικές ερωτήσεις, το σύστημα σας θα είναι έτοιμο για "
+"χρήση."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:6001
+msgid "Choose time zone"
+msgstr "Ρύθμιση ζώνης ώρας"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:7001
+msgid "Select a city in your country and time zone."
+msgstr "Επιλέξτε μια πόλη στην χρονική σας ζώνη:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:8001
+msgid "Selected city:"
+msgstr "Επιλεγμένη πόλη:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:9001
+msgid "Selected region:"
+msgstr "Επιλεγμένη περιοχή:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:10001
+msgid "Time zone:"
+msgstr "Ζώνη ώρας:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:11001
+msgid "Current time:"
+msgstr "Τρέχουσα ώρα:"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:12001
+msgid "Keyboard layout"
+msgstr "Διάταξη πληκτρολογίου"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:13001
+msgid "Which layout is most similar to your keyboard?"
+msgstr "Ποία διάταξη είναι παρόμοια με το πληκτρολόγιο σας;"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:14001
+msgid "You can type into this box to test your new keyboard layout."
+msgstr ""
+"Μπορείτε να πληκτρολογείτε σε αυτό το πλαίσιο για να δοκιμάσετε τη νέα "
+"διάταξη του πληκτρολογίου σας."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:15001
+msgid "Who are you?"
+msgstr "Ποιος είστε;"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:16001
+msgid "What is your name?"
+msgstr "Ποιο είναι το όνομα σας;"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:17001
+msgid "What name do you want to use to log in?"
+msgstr "Τι όνομα θέλετε να χρησιμοποιήσετε για την είσοδο στο σύστημα;"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:18001
+msgid ""
+"If more than one person will use this computer, you can set up multiple "
+"accounts after installation."
+msgstr ""
+"Αν χρησιμοποιούν παραπάνω από ένας αυτό τον υπολογιστή, τότε μπορείτε να "
+"εγκαταστήσετε πολλαπλούς λογαριασμούς χρηστών μετά τη εγκατάσταση."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:19001
+msgid "Choose a password to keep your account safe."
+msgstr "Επιλέξτε ένα κωδικό για να διατηρήσετε το λογαριασμό σας ασφαλή."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:20001
+msgid "You are running in debugging mode. Do not use a valuable password!"
+msgstr ""
+"Βρίσκεστε σε κατάσταση αποσφαλμάτωσης. Μην χρησιμοποιήσετε κάποιον σημαντικό "
+"κωδικό πρόσβασης."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:21001
+msgid ""
+"Enter the same password twice, so that it can be checked for typing errors."
+msgstr ""
+"Εισάγετε το κωδικό σας δύο φορές, ώστε να ελεγχθεί για τυχόν λάθη στην "
+"πληκτρολόγηση του."
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:22001
+msgid "Network configuration"
+msgstr "Ρύθμιση δικτύου"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:23001
+msgid "Software selection"
+msgstr "Επιλογή λογισμικού"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:24001
+msgid "Log in automatically"
+msgstr "Αυτόματη είσοδος χρήστη"
+
+#. Type: text
+#. Description
+#: ../oem-config.templates:25001
+msgid "Applying configuration"
+msgstr "Εφαρμογή ρυθμίσεων"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:26001
+msgid "Go Back"
+msgstr "Επιστροφή"
+
+#. Type: text
+#. Description
+#. Translators, this text will appear on a button, so KEEP IT SHORT
+#: ../oem-config.templates:27001
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#. Type: title
+#. Description
+#. Info message displayed when running in OEM mode
+#: ../oem-config-check.templates:2001
+msgid "OEM mode (for manufacturers only)"
+msgstr "Λειτουργία ΟΕΜ (μόνο για κατασκευαστές)"
+
+#. Type: text
+#. Description
+#. Translators: OEM stands for "Original Equipment Manufacturer", used in
+#. this case to describe an organisation that pre-installs the operating
+#. system on hardware and then sells the result to end users. These strings
+#. will typically only be displayed to OEMs themselves, so you don't have to
+#. worry too much about clarity.
+#: ../oem-config-udeb.templates:1001
+msgid "Prepare for OEM configuration"
+msgstr "Προετοιμασία για διαμόρφωση OEM"
+
+#. Type: text
+#. Description
+#. finish-install progress bar item
+#: ../oem-config-udeb.templates:2001
+msgid "Preparing for OEM configuration..."
+msgstr "Γίνεται προετοιμασία για διαμόρφωση OEM"
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid "Ready for OEM configuration"
+msgstr "Έτοιμο για διαμόρφωση OEM"
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"When you boot into the new system, you will be able to log in as the 'oem' "
+"user with the password you selected earlier; this user also has "
+"administrative privileges using 'sudo'. You will then be able to make any "
+"additional modifications you require to the system."
+msgstr ""
+"Όταν μπείτε στο νέο σας σύστημα, θα μπορείτε να συδεθείτε ως χρήστης 'oem' "
+"με το κωδικό που επιλέξατε προηγουμένως. Αυτός ο χρήστης έχει και δικαιώματα "
+"διαχειριστή με τη χρήση της εντολής 'sudo'. Τότε θα μπορείτε να κάνετε ότι "
+"ρυθμίσεις θέλετε στο σύστημα σας."
+
+#. Type: text
+#. Description
+#: ../oem-config-udeb.templates:3001
+msgid ""
+"Once the system is configured to your satisfaction, run 'oem-config-"
+"prepare'. This will cause the system to delete the temporary 'oem' user and "
+"ask the end user various configuration questions the next time it boots."
+msgstr ""
+"Μόλις το σύστημα ρυθμιστεί σύμφωνα με τις προτιμήσεις σας, εκτελέστε την "
+"εντολή 'oem-config-prepare'.  Η εντολή αυτή θα αφαιρέσει τον προσωρινό "
+"χρήστη 'oem' και θα αναγκάσει το σύστημα να εκκινήσει τη διαδικασία "
+"παραμετροποίησης χρήστη στην επόμενη επανεκκίνηση."

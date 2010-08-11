@@ -1,0 +1,35 @@
+# Dzongkha translation of gtk+
+# Copyright @ 2006 Free Software Foundation, Inc.
+# Mindu Dorji.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+.HEAD.dz\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2006-08-09 10:30+0530\n"
+"Last-Translator: Mindu Dorji\n"
+"Language-Team: DZONGKHA <pgeyleg@dit.gov.bt>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+"X-Poedit-Language: Dzongkha\n"
+"X-Poedit-Country: BHUTAN\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "རྒྱབ་བསྐྱོད།(_B)"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "གདོང་བསྐྱོད།(_F)"

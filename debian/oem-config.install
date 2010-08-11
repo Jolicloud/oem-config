@@ -1,0 +1,35 @@
+oem-config oem-config-dm oem-config-firstboot oem-config-prepare usr/sbin
+lib/*.py usr/lib/oem-config/oem_config
+lib/components/*.py usr/lib/oem-config/oem_config/components
+lib/frontend/__init__.py usr/lib/oem-config/oem_config/frontend
+lib/frontend/base.py usr/lib/oem-config/oem_config/frontend
+compat/* usr/lib/oem-config/compat
+pixmaps/world_map-960.png usr/share/oem-config/pixmaps
+pixmaps/timezone usr/share/oem-config/pixmaps
+apport/source_oem-config.py usr/share/apport/package-hooks
+
+# console-setup
+scripts/console-setup-apply usr/lib/oem-config/console
+
+# localechooser
+d-i/source/localechooser/debian/localechooser/usr/share/localechooser/languagelist usr/lib/oem-config/language
+d-i/source/localechooser/translation-check usr/lib/oem-config/language
+d-i/source/localechooser/debian/localechooser/usr/share/localechooser/languagelist.data.gz usr/lib/oem-config/language
+d-i/source/localechooser/regionmap usr/lib/oem-config/language
+d-i/source/localechooser/debian/short-tmp/shortlists usr/lib/oem-config/language
+scripts/localechooser-wrapper usr/lib/oem-config/language
+scripts/localechooser-apply usr/lib/oem-config/language
+
+# tzsetup
+d-i/source/tzsetup/debian/tzmap usr/lib/oem-config/timezone
+d-i/source/tzsetup/tzsetup usr/lib/oem-config/timezone
+scripts/tzsetup-wrapper usr/lib/oem-config/timezone
+
+# user-setup
+d-i/source/user-setup/functions.sh usr/lib/oem-config/user
+d-i/source/user-setup/reserved-usernames usr/lib/oem-config/user
+scripts/user-setup-wrapper usr/lib/oem-config/user
+
+# netcfg
+d-i/source/netcfg/netcfg usr/lib/oem-config/network
+scripts/netcfg-wrapper usr/lib/oem-config/network

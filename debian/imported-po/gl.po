@@ -1,0 +1,42 @@
+# translation of gl.po to Galego
+# Galician translation of gtk+.
+# Copyright (C) 1999, 2000 Jesus Bravo Alvarez
+#
+# Proxecto Trasno - Adaptación do software libre á lingua galega:  Se desexas
+# colaborar connosco, podes atopar máis información en http://trasno.gpul.org
+#
+# First Version: 1999-08-30 18:49+0200
+# Based on es.po by Pablo Saratxaga <srtxg@chanae.alphanet.ch>
+# and pt.po by Nuno Ferreira <nmrf@rnl.ist.utl.pt>
+#
+# Jesus Bravo Alvarez <jba@pobox.com>, 1999, 2000.
+# Ignacio Casal Quinteiro <nacho.resa@gmail.com>, 2005, 2006.
+msgid ""
+msgstr ""
+"Project-Id-Version: gl\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2006-06-23 19:49+0200\n"
+"Last-Translator: Ignacio Casal Quinteiro <nacho.resa@gmail.com>\n"
+"Language-Team: Galego <trasno@ceu.fi.udc.es>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: KBabel 1.11.2\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "_Atrás"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "A_diante"

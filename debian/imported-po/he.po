@@ -1,0 +1,36 @@
+# translation of gtk+.HEAD.he.po to Hebrew
+# Hebrew Translation for GTK+ - תרגום עברי ל-
+# Copyright (C) 2000,2002, 2004 Free Software Foundation, Inc.
+# Tzafrir Cohen <tzafrir@technion.ac.il>, 2000.
+# Gil 'Dolfin' Osher <dolfin@rpg.org.il>, 2002.
+# Gil Osher <dolfin@rpg.org.il>, 2004.
+# Yair Hershkovitz <yairhr@gmail.com>, 2006.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+.HEAD.he\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2006-04-13 20:09+0300\n"
+"Last-Translator: Yair Hershkovitz <yairhr@gmail.com>\n"
+"Language-Team: Hebrew <he@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms:  nplurals=2; plural=(n != 1);\n"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "א_חורה"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "_קדימה"

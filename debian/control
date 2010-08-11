@@ -1,0 +1,84 @@
+Source: oem-config
+Section: admin
+Priority: extra
+Maintainer: Colin Watson <cjwatson@ubuntu.com>
+Build-Depends: apt, bf-utf-source, dash, dctrl-tools, debhelper (>= 5.0.37.3ubuntu2), dpkg-dev (>= 1.9.0), intltool (>= 0.40.0), intltool-debian (>= 0.30+20040212), iso-codes, isoquery, libart-2.0-dev, libbogl-dev, libdebconfclient0-dev (>= 0.46), libdebian-installer4-dev (>= 0.41), libglib2.0-dev, libgtk2.0-dev, libiw-dev (>= 27+28pre9-1), locales, po-debconf (>= 0.5.0), python-all-dev (>= 2.3.5-11), python-central (>= 0.5), python-gobject-dev (>= 2.15.1), python-gtk2-dev, tzdata, xkb-data (>= 0.9)
+Standards-Version: 3.6.2
+XS-Python-Version: current, >= 2.4
+Vcs-Bzr: http://bazaar.launchpad.net/~ubuntu-core-dev/oem-config/trunk
+
+Package: oem-config
+Architecture: any
+Depends: ${shlibs:Depends}, ${python:Depends}, debconf (>= 1.4.52), oem-config-frontend-${mangled-version}, localechooser-data, iso-codes, apt, locales (>= 2.3.7-1), ${console-setup-depends}, passwd, adduser
+Suggests: checkbox
+Conflicts: oem-config-keyboard, oem-config-locale, oem-config-timezone
+Replaces: oem-config-keyboard, oem-config-locale, oem-config-timezone, oem-config-gtk (<< 1.54.13), oem-config-kde (<< 1.54.13)
+XB-Python-Version: ${python:Versions}
+Description: Perform end-user configuration after initial OEM installation
+ The oem-config script re-asks a number of questions that are normally asked
+ during installation, and reconfigures the system accordingly. This allows a
+ vendor to install a skeleton system, clone it onto a large number of
+ machines, and ship it to end users, while still allowing end users to set
+ up their own username and password, language, timezone, and so on.
+
+Package: oem-config-gtk
+Architecture: any
+Depends: ${shlibs:Depends}, ${python:Depends}, oem-config (= ${binary:Version}), xserver-xorg, python-gtk2, python-glade2, python-cairo, metacity
+Suggests: checkbox-gtk, gnome-control-center
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-${mangled-version}
+XB-Python-Version: ${python:Versions}
+Description: GTK+ frontend for end-user post-OEM-install configuration
+ The oem-config script re-asks a number of questions that are normally asked
+ during installation, and reconfigures the system accordingly. This allows a
+ vendor to install a skeleton system, clone it onto a large number of
+ machines, and ship it to end users, while still allowing end users to set
+ up their own username and password, language, timezone, and so on.
+ .
+ This is a GTK+ frontend to oem-config.
+
+Package: oem-config-kde
+Architecture: all
+Depends: ${python:Depends}, oem-config (= ${binary:Version}), xserver-xorg, python-kde4, kde-window-manager, kdesudo
+Replaces: oem-config (<< 1.0)
+Provides: oem-config-frontend-${mangled-version}
+XB-Python-Version: ${python:Versions}
+Description: KDE frontend for end-user post-OEM-install configuration
+ The oem-config script re-asks a number of questions that are normally asked
+ during installation, and reconfigures the system accordingly. This allows a
+ vendor to install a skeleton system, clone it onto a large number of
+ machines, and ship it to end users, while still allowing end users to set
+ up their own username and password, language, timezone, and so on.
+ .
+ This is a KDE frontend to oem-config.
+
+Package: oem-config-debconf
+Architecture: all
+Depends: ${python:Depends}, oem-config (= ${binary:Version}), debconf (>= 1.5.24ubuntu2) | cdebconf, bogl-bterm (>= 0.1.18-2ubuntu4), tasksel
+Provides: oem-config-frontend-${mangled-version}
+XB-Python-Version: ${python:Versions}
+Description: debconf frontend for end-user post-OEM-install configuration
+ The oem-config script re-asks a number of questions that are normally asked
+ during installation, and reconfigures the system accordingly. This allows a
+ vendor to install a skeleton system, clone it onto a large number of
+ machines, and ship it to end users, while still allowing end users to set
+ up their own username and password, language, timezone, and so on.
+ .
+ This is a frontend to oem-config that simply arranges for questions to be
+ asked using the normal debconf frontend.
+
+Package: oem-config-check
+XC-Package-Type: udeb
+Section: debian-installer
+Priority: standard
+Architecture: all
+Depends: cdebconf-udeb (>= 0.75), main-menu (>= 1.03)
+Description: enter OEM mode if requested
+
+Package: oem-config-udeb
+XC-Package-Type: udeb
+Section: debian-installer
+Architecture: all
+Depends: oem-config-check, cdebconf-udeb
+XB-Installer-Menu-Item: 2800
+Description: Prepare for OEM configuration

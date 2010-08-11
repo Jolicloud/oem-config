@@ -1,0 +1,35 @@
+# Translation of GTK+ to Bengali India
+# This file is distributed under the same license as the GTK+ package.
+# Copyright (C) 2003-2005, 2006 Free Software Foundation, Inc.
+# Sayamindu Dasgupta <unmadindu@Softhome.net>, 2004.
+# Progga <progga@BengaLinux.Org>, 2004, 2005.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: GTK+\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2006-08-28 00:35+0600\n"
+"Last-Translator: Mahay Alam Khan (মাহে আলম) <makl10n@yahoo.com>\n"
+"Language-Team: Bengali India <gnome-translation@bengalinux.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: KBabel 1.9.1\n"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "পূর্ববর্তী (_B)"
+
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "পরবর্তী (_F)"

@@ -1,0 +1,136 @@
+#!/usr/bin/python
+
+import os
+import sys
+import subprocess
+import time
+import signal
+import errno
+import imp
+
+sys.path.insert(0, '/usr/lib/oem-config')
+
+import oem_config.frontend
+
+background = '/usr/share/backgrounds/warty-final-ubuntu.png'
+
+class XStartupError(EnvironmentError):
+    pass
+
+class DM:
+    def __init__(self, vt, display):
+        self.vt = vt
+        self.display = display
+        self.server_started = False
+
+        # Look for a frontend module; we won't actually use it (yet), but
+        # this lets us find out which window manager etc. to launch. Be
+        # careful that importing this here will cause the underlying library
+        # to try to talk to the X server, which won't go well.
+        frontend_names = ['gtk_ui', 'kde_ui']
+        self.frontend = None
+        for f in frontend_names:
+            try:
+                imp.find_module(f, oem_config.frontend.__path__)
+                self.frontend = f
+                break
+            except ImportError:
+                pass
+        else:
+            raise AttributeError, ('No frontend available; tried %s' %
+                                   ', '.join(frontend_names))
+
+    def sigusr1_handler(self, signum, frame):
+        self.server_started = True
+
+    def server_preexec(self):
+        signal.signal(signal.SIGUSR1, signal.SIG_IGN)
+
+    def run(self, *program):
+        null = open('/dev/null', 'w')
+        logfile = open('/var/log/oem-config.log', 'a')
+
+        signal.signal(signal.SIGUSR1, self.sigusr1_handler)
+        signal.signal(signal.SIGTTIN, signal.SIG_IGN)
+        signal.signal(signal.SIGTTOU, signal.SIG_IGN)
+        server = subprocess.Popen(['X', '-br', '-ac', '-noreset', self.vt, self.display], stdin=null, stdout=logfile, stderr=logfile, preexec_fn=self.server_preexec)
+
+        os.environ['HOME'] = '/root'
+        os.environ['DISPLAY'] = self.display
+
+        # Really we should select on a pipe or something, but it's not worth
+        # the effort for now.
+        timeout = 60
+        while not self.server_started:
+            if timeout == 0:
+                raise XStartupError, "X server failed to start after 60 seconds"
+            time.sleep(1)
+            timeout -= 1
+
+        if self.frontend == 'gtk_ui':
+            if os.access(background, os.R_OK):
+                import gtk
+                pixbuf = gtk.gdk.pixbuf_new_from_file(background)
+                root = gtk.gdk.get_default_root_window()
+                (root_width, root_height) = root.get_size()
+                scaled = pixbuf.scale_simple(root_width, root_height, gtk.gdk.INTERP_BILINEAR)
+                (pixmap, mask) = scaled.render_pixmap_and_mask(0)
+                root.set_back_pixmap(pixmap, False)
+                root.clear()
+                gtk.gdk.flush()
+
+        extras = []
+        if self.frontend == 'gtk_ui':
+            wm = subprocess.Popen(['/usr/bin/metacity', '--sm-disable'], stdin=null, stdout=logfile, stderr=logfile)
+            if os.path.exists('/usr/lib/gnome-settings-daemon/gnome-settings-daemon'):
+                extras.append(subprocess.Popen(['/usr/lib/gnome-settings-daemon/gnome-settings-daemon'], stdin=null, stdout=logfile, stderr=logfile))
+        elif self.frontend == 'kde_ui':
+            extras.append(subprocess.Popen(['/usr/bin/dbus-launch'], stdin=null, stdout=logfile, stderr=logfile))
+            extras.append(subprocess.Popen(['kwriteconfig', '--file', 'kwinrc', '--group', 'Compositing', '--key', 'Enabled', 'false'], stdin=null, stdout=logfile, stderr=logfile))
+            wm = subprocess.Popen('/usr/bin/kwin', stdin=null, stdout=logfile, stderr=logfile)
+
+        greeter = subprocess.Popen(program, stdin=null, stdout=logfile, stderr=logfile)
+
+        ret = None
+        try:
+            ret = greeter.wait()
+        finally:
+            def sigalrm_handler(signum, frame):
+                os.kill(wm.pid, signal.SIGKILL)
+                for extra in extras:
+                    os.kill(extra.pid, signal.SIGKILL)
+
+            os.kill(wm.pid, signal.SIGTERM)
+            for extra in extras:
+                os.kill(extra.pid, signal.SIGTERM)
+            signal.signal(signal.SIGALRM, sigalrm_handler)
+            signal.alarm(1) # low patience with WMs failing to exit on demand
+            processes = set(extras)
+            processes.add(wm)
+            while processes:
+                done = set()
+                for process in processes:
+                    try:
+                        process.wait()
+                        done.add(process)
+                    except OSError, e:
+                        if e.errno == errno.EINTR:
+                            continue
+                        raise
+                processes -= done
+            signal.alarm(0)
+            os.kill(server.pid, signal.SIGTERM)
+            server.wait()
+
+        if ret is not None and ret >= 0:
+            return ret
+        else:
+            return 1
+
+if len(sys.argv) < 3:
+    sys.stderr.write('Usage: oem-config-dm <vt[1-N]> <:[0-N]> <program> [<arguments>]\n')
+    sys.exit(1)
+
+vt, display = sys.argv[1:3]
+dm = DM(vt, display)
+sys.exit(dm.run(*sys.argv[3:]))

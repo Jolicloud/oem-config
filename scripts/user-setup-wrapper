@@ -1,0 +1,19 @@
+#! /bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+
+ROOT="$1"
+
+OVERRIDE_SYSTEM_USER=1 /usr/lib/oem-config/user/user-setup "$@"
+
+db_get passwd/make-user
+if [ "$RET" = true ]; then
+	db_get passwd/username
+	USER="$RET"
+	if [ -d "$ROOT/home/$USER" ]; then
+		touch "$ROOT/home/$USER/.hwdb"
+	fi
+fi
+
+exit 0

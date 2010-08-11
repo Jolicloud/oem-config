@@ -1,0 +1,4 @@
+#! /bin/sh
+# The installer uses apt-install to queue packages for installation in the
+# target system. In oem-config, we can just install them directly.
+DEBCONF_FRONTEND=noninteractive DEBCONF_ADMIN_EMAIL= apt-get --no-upgrade -o Acquire::gpgv::Options::=--ignore-time-conflict -y install "$@" </dev/null

@@ -1,0 +1,49 @@
+.Dd December 22, 2008
+.Os Ubuntu
+.ds volume-operating-system Ubuntu
+.Dt OEM\-CONFIG\-DM 8
+.Sh NAME
+.Nm oem\-config\-dm
+.Nd display manager for oem\-config
+.Sh SYNOPSIS
+.Nm
+.Li vt Ns Ar N
+.Li \&: Ns Ar N
+.Ar program
+.Op Ar arguments
+.Sh DESCRIPTION
+.Nm
+is a minimal display and session manager for
+.Xr oem\-config 8 ,
+responsible for starting up X and necessary desktop infrastructure before
+running
+.Xr oem\-config 8
+itself.
+It is not intended to be run directly by users.
+.Pp
+The
+.Li vt Ns Ar N
+and
+.Li \&: Ns Ar N
+arguments are passed through to the X server to set the virtual terminal and
+display number on which
+.Xr oem\-config 8
+will run.
+Valid numbers start at 1 for
+.Li vt Ns Ar N
+and 0 for
+.Li \&: Ns Ar N .
+.Sh AUTHOR
+.An Colin Watson Aq cjwatson@ubuntu.com
+.Pp
+.An -nosplit
+.Ic oem\-config
+is copyright \(co 2005, 2006, 2007, 2008
+.An Canonical Ltd . ,
+and
+copyright \(co 2006, 2007
+.An Anirudh Ramesh .
+See the GNU General Public License version 2 or later for copying
+conditions.
+A copy of the GNU General Public License is available in
+.Pa /usr/share/common\-licenses/GPL .

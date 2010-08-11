@@ -1,0 +1,149 @@
+#! /usr/bin/make -f
+
+VERSION := $(shell dpkg-parsechangelog | awk '/^Version:/ { print $$2 }')
+EXPECTED_AC_VERSION := $(shell echo "$(VERSION)" | cut -d. -f1,2)
+AC_VERSION := $(shell grep -w '^AC_INIT' configure.ac | cut -d' ' -f2 | \
+			sed 's/[][,]//g')
+MANGLED_VERSION := $(subst ~,-,$(VERSION))
+
+ifneq ($(EXPECTED_AC_VERSION),$(AC_VERSION))
+$(warning Version $(VERSION) in debian/changelog does not match $(AC_VERSION) in configure.ac!)
+endif
+
+tmp = $(CURDIR)/debian/oem-config
+
+PYTHON := $(shell pyversions -r)
+
+console-setup-depends := console-setup (>= $(shell cd d-i/source/console-setup && dpkg-parsechangelog | awk '/Version:/ {print $$2}'))
+
+ifeq (,$(strip $(foreach dir,$(subst :, ,$(PATH)),$(wildcard $(dir)/pygobject-codegen-2.0))))
+$(warning pygobject-codegen-2.0 missing; disabling GTK frontend)
+export OEM_CONFIG_NO_GTK := 1
+endif
+
+update:
+	$(MAKE) -C d-i update
+
+update-local:
+	$(MAKE) -C d-i update UPDATE_LOCAL=1
+
+d-i/source/console-setup/Keyboard/MyKeyboardNames.pl:
+	$(MAKE) -C d-i/source/console-setup/Keyboard MyKeyboardNames.pl \
+		xkbdir=/usr/share/X11/xkb
+
+lib/keyboard_names.py: d-i/source/console-setup/Keyboard/MyKeyboardNames.pl
+	d-i/make-keyboard-names $< > $@
+
+Makefile:
+	PYTHON=$(PYTHON) ./configure --prefix=/usr
+
+build: Makefile lib/keyboard_names.py
+	$(MAKE)
+	$(MAKE) -C d-i build
+
+clean:
+	dh_testdir
+	dh_testroot
+	find -type f -name '*.pyc' -print0 | xargs -0r rm -f
+	rm -f po/.intltool-merge-cache po/stamp-po
+	$(MAKE) -C d-i clean
+	[ ! -f Makefile ] || $(MAKE) distclean
+	dh_clean d-i/source/console-setup/Keyboard/MyKeyboardNames.pl \
+		 lib/keyboard_names.py
+
+	$(MAKE) -C d-i check
+
+binary-arch: build
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs -a
+
+	# For the meantime, nearly everything automake wants to install is
+	# part of the GTK frontend.
+ifndef OEM_CONFIG_NO_GTK
+	$(MAKE) install DESTDIR=$(CURDIR)/debian/oem-config-gtk \
+		pythondir=\$${prefix}/lib/oem-config \
+		pyexecdir=\$${prefix}/lib/oem-config \
+		pkgpythondir=\$${prefix}/lib/oem-config/oem_config \
+		pkgpyexecdir=\$${prefix}/lib/oem-config/oem_config
+	rm -f debian/oem-config-gtk/usr/share/oem-config/desktop/oem-config-prepare-kde.desktop
+	rm -rf debian/oem-config-gtk/usr/share/oem-config/pixmaps
+endif
+	$(MAKE) -C d-i install
+	dh_install -a
+
+	# Bits of manual installation that can't be done by dh_install
+	sed -i 's/@VERSION@/$(VERSION)/g' debian/oem-config/usr/sbin/oem-config
+	sed -e 's,/usr/share/console-setup-mini/console-setup.config,/var/lib/dpkg/info/console-setup.config,g' \
+	    -e 's,^\([[:space:]]*\)update-initramfs,\1: update-initramfs,' \
+		d-i/source/console-setup/debian/console-setup.postinst \
+		> debian/oem-config/usr/lib/oem-config/console/console-setup.postinst
+	chmod +x debian/oem-config/usr/lib/oem-config/console/console-setup.postinst
+	sed -e 's,/target,,g' \
+		d-i/source/tzsetup/post-base-installer.d/*tzsetup \
+		> debian/oem-config/usr/lib/oem-config/timezone/post-base-installer
+	chmod +x debian/oem-config/usr/lib/oem-config/timezone/post-base-installer
+	sed -i -e 's,db_input medium tzsetup/selected,db_input high tzsetup/selected,' \
+	       -e 's,/usr/share/tzsetup/tzmap,/usr/lib/oem-config/timezone/tzmap,g' \
+		debian/oem-config/usr/lib/oem-config/timezone/tzsetup
+	for x in user-setup user-setup-ask user-setup-apply; do \
+		sed -e 's,/usr/lib/user-setup,/usr/lib/oem-config/user,g' \
+		    -e 's,/bin/sh,/bin/bash,g' \
+			d-i/source/user-setup/$$x \
+			> debian/oem-config/usr/lib/oem-config/user/$$x; \
+		chmod +x debian/oem-config/usr/lib/oem-config/user/$$x; \
+	done
+	sed -i -e 's,db_input high user-setup/encrypt-home,db_input medium user-setup/encrypt-home,' \
+		debian/oem-config/usr/lib/oem-config/user/user-setup-ask
+	echo oem >> debian/oem-config/usr/lib/oem-config/user/reserved-usernames
+	set -e; for x in languagemap localechooser; do \
+		sed 's,/usr/share/localechooser,/usr/lib/oem-config/language,g' \
+			d-i/source/localechooser/$$x \
+			> debian/oem-config/usr/lib/oem-config/language/$$x; \
+		chmod +x debian/oem-config/usr/lib/oem-config/language/$$x; \
+	done
+	sed -i 's/\\\$${!TAB}/ /g' \
+		debian/oem-config/usr/lib/oem-config/language/localechooser
+
+	cp debian/lintian-override $(tmp)/usr/share/lintian/overrides/oem-config
+	dh_installdebconf -a
+	echo >> debian/oem-config/DEBIAN/templates
+	po2debconf --podir=debian/imported-po \
+		debian/oem-config.templates-imported \
+		>> debian/oem-config/DEBIAN/templates
+	echo >> debian/oem-config/DEBIAN/templates
+	cat d-i/templates >> debian/oem-config/DEBIAN/templates
+	dh_installdocs -a
+	dh_installchangelogs -a
+	dh_installinit -a -n
+	dh_strip -a
+	dh_compress -a
+	dh_fixperms -a
+	dh_pycentral -a
+	dh_installdeb -a
+	dh_shlibdeps -a
+	dh_gencontrol -a -- -Vmangled-version='$(MANGLED_VERSION)'
+	dh_md5sums -a
+	dh_builddeb -a
+
+binary-indep:
+	dh_testdir
+	dh_testroot
+	dh_clean -k
+	dh_installdirs -i
+	dh_install -i
+	dh_installdebconf -i
+	dh_installdocs -i
+	dh_installchangelogs -i
+	dh_compress -i
+	dh_fixperms -i
+	dh_pycentral -i
+	dh_installdeb -i
+	dh_gencontrol -i -- -Vmangled-version='$(MANGLED_VERSION)'
+	dh_md5sums -i
+	dh_builddeb -i
+
+binary: binary-arch binary-indep
+
+.PHONY: build clean binary-arch binary-indep binary

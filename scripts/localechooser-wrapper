@@ -1,0 +1,23 @@
+#! /bin/sh
+set -e
+
+. /usr/share/debconf/confmodule
+
+supported () {
+	grep -q "^$1 " /usr/share/i18n/SUPPORTED
+}
+
+# Recover from broken debian-installer/locale settings.
+db_get debian-installer/locale
+LOCALE="$RET"
+if ! supported "$LOCALE"; then
+	db_set debian-installer/locale ''
+fi
+
+if [ "$OEM_CONFIG_FRONTEND" = debconf_ui ]; then
+	export TERM_FRAMEBUFFER=1
+else
+	export OVERRIDE_SHOW_ALL_LANGUAGES=1
+fi
+PATH="/usr/lib/oem-config/compat:/usr/lib/oem-config/language:$PATH" \
+	localechooser

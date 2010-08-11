@@ -1,0 +1,51 @@
+# Dutch translation of gtk+.
+# Copyright © 2002 Free Software Foundation, Inc.
+# Dirk-Jan C. Binnema <djcb@djcbsoftware.nl>, 2002.
+# Ronald Hummelink <ronald@hummelink.xs4all.nl>, 2002.
+# Tino Meinen <a.t.meinen@chelo.nl>, 2002, 2003, 2004, 2005, 2006, 2007.
+# --------------
+# Discussiepunten:
+# expander -> uitklapper (win32 heeft het over samenvouwen/openvouwen)
+# render -> render/weergeven/tonen?
+# spinbutton -> spinknop
+# tag -> markering/etiket/label
+# tooltip -> tooltip/werktip/tip
+# separator -> scheiding/scheidingslijn/scheidingsteken
+# selected -> geselecteerde/gekozen
+# standard display -> standaard display
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: gtk+ 2.0\n"
+"Report-Msgid-Bugs-To: cjwatson@ubuntu.com\n"
+"POT-Creation-Date: 2007-09-29 16:27+0100\n"
+"PO-Revision-Date: 2007-09-06 01:59+0200\n"
+"Last-Translator: Tino Meinen <a.t.meinen@chello.nl>\n"
+"Language-Team: Dutch <vertaling@vrijschrift.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# Vorige is ook een mogelijkheid:
+# Forward-Back Volgende-Vorige
+# voorlopig laten staan op Terug (12-08-2005)
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:1001
+msgid "Navigation|_Back"
+msgstr "_Terug"
+
+# Was eerst: Voorwaarts, maar bij configuratie-assistenten is
+# dat onlogisch. Daar betekent het in feite hetzelfde als Next.
+# Volgende dus. Desnoods zou 'Heen' (Forward-Back <-> Heen-Terug)
+# ook kunnen, maar dat is minder mooit.
+#. Type: text
+#. Description
+#. Translations for this template are imported from GTK. Please keep them in
+#. sync.
+#: ../oem-config.templates-imported:2001
+msgid "Navigation|_Forward"
+msgstr "_Volgende"

@@ -1,0 +1,113 @@
+.Dd December 22, 2008
+.Os Ubuntu
+.ds volume-operating-system Ubuntu
+.Dt OEM\-CONFIG 8
+.Sh NAME
+.Nm oem\-config
+.Nd perform end-user configuration after initial OEM installation
+.Sh SYNOPSIS
+.Nm
+.Op Fl Fl frontend Ar frontend
+.Op Fl Fl debug
+.Op Fl Fl pdb
+.Op Fl Fl cdebconf
+.Op Fl Fl old\-tzmap
+.Op Fl Fl only
+.Op Fl Fl query
+.Sh DESCRIPTION
+OEM distributors of Ubuntu often wish to pre-install the operating system.
+However, as well as physically installing files onto disk, the Ubuntu
+installer also does a certain amount of user-specific configuration: it sets
+up the default language, a user account, and so on.
+After delivering a system to an end user,
+.Nm
+may be used to ask these configuration questions again, and reconfigure the
+system accordingly.
+.Pp
+.Nm
+must be run as root.
+.Pp
+.Nm
+has multiple frontends, including one written for GTK+
+.No ( Li gtk_ui ) ,
+one written for KDE
+.No ( Li kde_ui ) ,
+and one that simply asks questions using debconf
+.No ( Li debconf_ui ) .
+.Pp
+The following options are available:
+.Bl -tag -width 4n
+.It Fl f , Fl Fl frontend Ar frontend
+Use
+.Ar frontend
+rather than the automatically-detected default.
+.It Fl d , Fl Fl debug
+Run in debugging mode, sending verbose information to
+.Pa /var/log/oem\-config.log
+that may be useful to developers.
+.Em Note that passwords will be logged in debugging mode!
+.It Fl Fl pdb
+Drop into the Python debugger in the event of a crash.
+Only effective if
+.Nm
+is being run from a terminal.
+.It Fl Fl cdebconf
+Use
+.Ic cdebconf
+instead of the traditional Perl
+.Ic debconf
+implementation.
+In future this may provide enough memory efficiency benefits to be made the
+default, but for now it is not really worthwhile and is therefore for
+experimental use only.
+.It Fl Fl old\-tzmap
+Use the old timezone map widget.
+(This only applies to the
+.Li gtk_ui
+frontend.)
+.It Fl Fl only
+Tell
+.Nm
+that it is the only desktop program running so that it can customize its
+user interface to better suit a minimal environment.
+.It Fl q , Fl Fl query
+Instead of asking questions, print the name of the default frontend to
+standard output and exit.
+.El
+.Sh CUSTOMISATION
+(This section is due for expansion.)
+.Pp
+Scripts in the
+.Pa /usr/lib/oem\-config/post\-install
+directory will be run before
+.Nm
+exits.
+Their file names must not contain
+.Dq \&. ,
+so that files such as
+.Dq foo.dpkg\-new
+are avoided.
+They will be run under the control of the
+.Sq noninteractive
+debconf frontend (see
+.Xr debconf 7 ) .
+At present error exit statuses will be ignored, but this may change, so
+these
+.Dq hook scripts
+should make sure to exit zero on success.
+.Sh AUTHORS
+.An Colin Watson Aq cjwatson@ubuntu.com
+.An Anirudh Ramesh
+.An Evan Dandrea Aq evand@ubuntu.com
+.Pp
+.An -nosplit
+.Nm
+is copyright \(co 2005, 2006, 2007, 2008
+.An Canonical Ltd . ,
+and
+copyright \(co 2006, 2007
+.An Anirudh Ramesh .
+See the GNU General Public License version 2 or later for copying
+conditions.
+A copy of the GNU General Public License is available in
+.Pa /usr/share/common\-licenses/GPL .
